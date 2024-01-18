@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+}
+
+body {
+    background-color: #1c1b1b;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    display: flex;
+    padding: 30px 65px;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 41px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: rgb(243, 178, 0);
+}
+
+.navbar {
+    display: flex;
+    font-size: 35px;
+    font-weight: 550;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 25px;
+    color: white;
+    transition: all ease .40s;
+}
+
+.navbar a:hover {
+    color: #f3b200;
+}
+
+section {
+    padding: 25%;
+    margin-left: 5px;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px;
+}
+
+.home-text {
+    max-width: 600px;
+}
+
+.home-text span {
+    border: 1px solid black;
+    padding: 0.2rem 0.7rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #ff8c00, #ff2d55);
+    font-size: 1.2em;
+    color: #fdfdfd;
+}
+
+.home-text h1 {
+    margin-left: 1px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-size: 45px;
+    font-weight: 1000;
+    color: #ebb504;
+}
+
+.home-text p {
+    color: #ffffff;
+}
+
+.home-image {
+    padding: 0 0 0 10%;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    55% {
+        transform: translateY(-7px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.home-image img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 50%;
+    animation: float 3s infinite ease-in-out; /* Adjust the duration and timing function */
+}
+@media screen and (max-width: 824px) {
+    header {
+        padding: 20px 30px; /* Adjust padding for smaller screens */
+    }
+
+    .navbar {
+        font-size: 18px; /* Slightly reduce font size for smaller screens */
+    }
+
+    section {
+        padding: 8%; /* Adjust padding for smaller screens */
+    }
+
+    .home {
+        padding: 15px; /* Adjust padding for smaller screens */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-text {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .home-image {
+        padding: 0;
+        text-align: center;
+        margin-top: 15px; /* Add margin to separate image and text */
+    }
+
+    .home-image img {
+        max-width: 100%; /* Adjust image width for smaller screens */
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/* Additional media query for regular phones (smaller width) */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 15px 20px; /* Further adjust padding for smaller screens */
+    }
+
+    .navbar {
+        font-size: 16px; /* Further reduce font size for smaller screens */
+    }
+
+    section {
+        padding: 5%; /* Further adjust padding for smaller screens */
+    }
+
+    .home {
+        padding: 10px; /* Further adjust padding for smaller screens */
+    }
+}
