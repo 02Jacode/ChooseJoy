@@ -161,3 +161,12 @@ section {
         padding: 10px; /* Further adjust padding for smaller screens */
     }
 }
+@media screen and (max-width: 767px) {
+    .containers {
+        padding: 10px;
+    }
+    .btn-31 {
+        padding: 0.8rem 1.6rem;
+    }
+    /* Add any other styles specific to small screens */
+}
