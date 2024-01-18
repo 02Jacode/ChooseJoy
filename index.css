@@ -145,13 +145,12 @@ section {
 /* Responsive styles for smaller screens */
 @media screen and (max-width: 480px) {
     header {
-        max-width: 100%;
-        padding: 15px 25px;
+        padding: 20px 30px;
+        display: grid;
     }
 
     .navbar {
-        padding: 10px;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     section, .home {
