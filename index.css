@@ -6,6 +6,7 @@
 }
 
 body {
+    transition: all ease .40s;
     background-color: #1c1b1b;
     font-family: "Poppins", sans-serif;
 }
@@ -37,7 +38,6 @@ header {
     text-decoration: none;
     padding: 25px;
     color: white;
-    transition: all ease .40s;
 }
 
 .navbar a:hover {
@@ -54,6 +54,10 @@ section {
     justify-content: center;
     align-items: center;
     padding: 45px;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 1s ease-in-out forwards;
+
 }
 
 .home-text {
@@ -137,9 +141,29 @@ section {
     }
 
     .home-image img {
-        max-width: 100%; /* Adjust image width for smaller screens */
+        max-width: 85%; /* Adjust image width for smaller screens */
         display: block;
         margin: 0 auto;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 /* Responsive styles for smaller screens */
@@ -156,8 +180,27 @@ section {
     section, .home {
         padding: 5% 10px;
     }
+    
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }}
 /* Responsive styles for small screens */
 @media screen and (max-width: 767px) {
     .containers {
@@ -169,5 +212,23 @@ section {
         padding: 0.8rem 1.6rem;
     }
 
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }}
     /* Add any other styles specific to small screens */
 }
